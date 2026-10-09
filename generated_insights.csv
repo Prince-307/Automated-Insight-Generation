@@ -1,0 +1,13 @@
+insight_id,type,indicator,entity,period,value,prev_value,change_pct,severity,explanation
+INS-0001,trend,anc_coverage,Ahmedabad,2026-08,69,85.0,-18.8,Medium,"anc_coverage in Ahmedabad decreased by 18.8% in 2026-08, compared with the previous observation (85.0)."
+INS-0002,trend,anc_coverage,Mehsana,2026-08,42,84.0,-50.0,High,"anc_coverage in Mehsana decreased by 50.0% in 2026-08, compared with the previous observation (84.0)."
+INS-0003,trend,high_risk_cases,Ahmedabad,2026-08,13,10.0,30.0,High,"high_risk_cases in Ahmedabad increased by 30.0% in 2026-08, compared with the previous observation (10.0)."
+INS-0004,trend,high_risk_cases,Bhavnagar,2026-08,15,17.0,-11.8,Medium,"high_risk_cases in Bhavnagar decreased by 11.8% in 2026-08, compared with the previous observation (17.0)."
+INS-0005,trend,high_risk_cases,Mehsana,2026-08,28,11.0,154.6,High,"high_risk_cases in Mehsana increased by 154.6% in 2026-08, compared with the previous observation (11.0)."
+INS-0006,trend,high_risk_cases,Vadodara,2026-08,6,7.0,-14.3,Medium,"high_risk_cases in Vadodara decreased by 14.3% in 2026-08, compared with the previous observation (7.0)."
+INS-0007,outlier,anc_coverage,Ahmedabad,2026-08,69,78.33,-11.9,Medium,anc_coverage in Ahmedabad was unusually low at 69 during 2026-08 vs state mean of 78.33.
+INS-0008,outlier,anc_coverage,Mehsana,2026-08,42,78.33,-46.4,High,anc_coverage in Mehsana was unusually low at 42 during 2026-08 vs state mean of 78.33.
+INS-0009,outlier,immunization,Vadodara,2026-08,97,91.58,5.9,Medium,immunization in Vadodara was unusually high at 97 during 2026-08 vs state mean of 91.58.
+INS-0010,outlier,high_risk_cases,Mehsana,2026-08,28,13.42,108.7,High,high_risk_cases in Mehsana was unusually high at 28 during 2026-08 vs state mean of 13.42.
+INS-0011,correlation,anc_coverage:high_risk_cases,All districts,Dataset-wide,r=-0.93,n/a,n/a,High,anc_coverage and high_risk_cases have a strong negative Pearson correlation of -0.93.
+INS-0012,correlation,institutional_delivery:immunization,All districts,Dataset-wide,r=0.98,n/a,n/a,High,institutional_delivery and immunization have a strong positive Pearson correlation of 0.98.
