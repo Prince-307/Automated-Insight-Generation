@@ -128,7 +128,12 @@ def generate_insights(trends, outliers, correlations):
         "explanation",
     ]
 
-    return pd.DataFrame(insights, columns=columns if insights else columns)
+    res_df = pd.DataFrame(insights, columns=columns if insights else columns)
+    if not res_df.empty:
+        for col in ["value", "prev_value", "change_pct"]:
+            res_df[col] = res_df[col].astype(str)
+    return res_df
+
 
 
 def export_insights(insights):
