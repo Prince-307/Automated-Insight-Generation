@@ -20,18 +20,29 @@ st.caption(
     "outlier detection and correlation analysis"
 )
 
-# Upload CSV
-uploaded_file = st.file_uploader(
-    "Upload healthcare CSV",
-    type=["csv"],
-)
+# Upload CSV or Load Sample
+col_upload, col_sample = st.columns([3, 1])
+with col_upload:
+    uploaded_file = st.file_uploader(
+        "Upload healthcare CSV",
+        type=["csv"],
+    )
+with col_sample:
+    st.write("")
+    st.write("")
+    use_sample = st.checkbox("Use sample dataset", value=False)
 
-if uploaded_file is not None:
+file_to_load = uploaded_file
+if file_to_load is None and use_sample:
+    file_to_load = "data/original_assignment_sample.csv"
+
+if file_to_load is not None:
     try:
-        df = load_data(uploaded_file)
+        df = load_data(file_to_load)
     except Exception as e:
         st.error(f"Error loading CSV: {e}")
         st.stop()
+
 
     indicators = [
         "anc_coverage",
